@@ -112,7 +112,7 @@ export async function execShellCommand(
 			...command,
 		];
 	} else {
-		toolRunnerCommandLine = "bash";
+		toolRunnerCommandLine = "sh";
 		toolRunnerCommandLineArgs = ["-c", ...command];
 	}
 	const message =
@@ -726,7 +726,7 @@ done`;
 			if (fs.existsSync(ros1SetupPath)) {
 				colconCommandPrefix = [
 					...colconCommandPrefix,
-					`source ${ros1SetupPath}`,
+					`. ${ros1SetupPath}`,
 					`&&`,
 				];
 			}
@@ -736,7 +736,7 @@ done`;
 			if (fs.existsSync(ros2SetupPath)) {
 				colconCommandPrefix = [
 					...colconCommandPrefix,
-					`source ${ros2SetupPath}`,
+					`. ${ros2SetupPath}`,
 					`&&`,
 				];
 			}

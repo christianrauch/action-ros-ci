@@ -30809,7 +30809,7 @@ function execShellCommand(command_1, options_1) {
             ];
         }
         else {
-            toolRunnerCommandLine = "bash";
+            toolRunnerCommandLine = "sh";
             toolRunnerCommandLineArgs = ["-c", ...command];
         }
         const message = log_message ||
@@ -31224,7 +31224,7 @@ done`;
                 if (fs_1.default.existsSync(ros1SetupPath)) {
                     colconCommandPrefix = [
                         ...colconCommandPrefix,
-                        `source ${ros1SetupPath}`,
+                        `. ${ros1SetupPath}`,
                         `&&`,
                     ];
                 }
@@ -31234,7 +31234,7 @@ done`;
                 if (fs_1.default.existsSync(ros2SetupPath)) {
                     colconCommandPrefix = [
                         ...colconCommandPrefix,
-                        `source ${ros2SetupPath}`,
+                        `. ${ros2SetupPath}`,
                         `&&`,
                     ];
                 }
