@@ -499,11 +499,7 @@ async function run_throw(): Promise<void> {
 		cwd: rosWorkspaceDir,
 		env: {
 			...process.env,
-			ROS_VERSION: targetRos2Distro ? "2" : "1",
-			ROS_PYTHON_VERSION:
-				targetRos2Distro || (targetRos1Distro && targetRos1Distro == "noetic")
-					? "3"
-					: "2",
+			AAA: "BBB",
 		},
 	};
 	if (colconDefaultsFile !== "") {

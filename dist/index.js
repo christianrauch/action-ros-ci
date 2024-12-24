@@ -31074,9 +31074,7 @@ function run_throw() {
         yield io.mkdirP(rosWorkspaceDir + "/src");
         const options = {
             cwd: rosWorkspaceDir,
-            env: Object.assign(Object.assign({}, process.env), { ROS_VERSION: targetRos2Distro ? "2" : "1", ROS_PYTHON_VERSION: targetRos2Distro || (targetRos1Distro && targetRos1Distro == "noetic")
-                    ? "3"
-                    : "2" }),
+            env: Object.assign(Object.assign({}, process.env), { AAA: "BBB" }),
         };
         if (colconDefaultsFile !== "") {
             options.env = Object.assign(Object.assign({}, options.env), { COLCON_DEFAULTS_FILE: colconDefaultsFile });
